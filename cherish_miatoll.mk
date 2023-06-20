@@ -12,34 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from miatoll device
+# Inherit from miatoll  device
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
 
-# Inherit some common xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+# Inherit some common Cherish stuff
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := xtended_miatoll
+PRODUCT_NAME := cherish_miatoll
 PRODUCT_DEVICE := miatoll
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := SM6250
 PRODUCT_MANUFACTURER := Xiaomi
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Inherit some props from Cherish
+CHERISH_VANILLA := true
+CHERISH_BUILD_TYPE := OFFICIAL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=COSMIC
 
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
-TARGET_SHIPS_GALLERY := false
-
-# Xtended Stuffs
-XTENDED_BUILD_TYPE := OFFICIAL
-XTENDED_BUILD_MAINTAINER := COSMIC
-PROCESSOR_MODEL := atoll
-WITH_GAPPS := true
-TARGET_USES_BLUR := true
-XTENDED_BUILD_DONATE_URL := https://paypal.me/avanindra127
-XTENDED_BUILD_SUPPORT_URL := https://t.me/itz_miatoll_zone404
 
 # Inherit some common device props
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -47,3 +44,8 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="cheetah-user 13 TQ2A.230505.002 9891397 release-keys"
+
+BUILD_FINGERPRINT := google/cheetah/cheetah:13/TQ2A.230505.002/9891397:user/release-keys

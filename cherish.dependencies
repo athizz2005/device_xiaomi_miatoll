@@ -1,0 +1,44 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "CherishOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch":      "tiramisu"
+  },
+  {
+    "remote":      "github",
+    "repository":  "c0smic-Lab/device_xiaomi_sm6250-common",
+    "target_path": "device/xiaomi/sm6250-common"
+    "branch":      "cherish"
+  },
+  {
+    "remote":      "github",
+    "repository":  "Xtended-Devices/vendor_xiaomi_miatoll",
+    "target_path": "vendor/xiaomi/miatoll"
+    "branch":      "xt"
+  },
+  {
+    "remote":      "github",
+    "repository":  "Xtended-Devices/vendor_xiaomi_sm6250-common",
+    "target_path": "vendor/xiaomi/sm6250-common"
+    "branch":      "xt"
+  },
+  {
+    "remote":      "github",
+    "repository":  "c0smic-Lab/kernel_xiaomi_sm6250",
+    "target_path": "kernel/xiaomi/sm6250"
+    "branch":      "dfc"
+  },
+  {
+    "remote":      "gitlab",
+    "repository":  "rayavanindra/vendor_xiaomi_miuicamera",
+    "target_path": "vendor/xiaomi/miuicamera",
+    "branch":      "thirteen"
+  },
+  {
+    "remote":      "gitlab",
+    "repository":  "crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r487747",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-r487747",
+    "branch":      "13.0"
+  }
+]
