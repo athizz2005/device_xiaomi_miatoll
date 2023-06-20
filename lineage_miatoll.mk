@@ -12,34 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
 # Inherit from miatoll device
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
-
-# Inherit some common xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := xtended_miatoll
+PRODUCT_NAME := lineage_miatoll
 PRODUCT_DEVICE := miatoll
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := SM6250
 PRODUCT_MANUFACTURER := Xiaomi
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# MiuiCamera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
-TARGET_SHIPS_GALLERY := false
-
-# Xtended Stuffs
-XTENDED_BUILD_TYPE := OFFICIAL
-XTENDED_BUILD_MAINTAINER := COSMIC
-PROCESSOR_MODEL := atoll
-WITH_GAPPS := true
-TARGET_USES_BLUR := true
-XTENDED_BUILD_DONATE_URL := https://paypal.me/avanindra127
-XTENDED_BUILD_SUPPORT_URL := https://t.me/itz_miatoll_zone404
 
 # Inherit some common device props
 TARGET_SUPPORTS_QUICK_TAP := true
