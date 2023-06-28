@@ -5,9 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cherish_miatoll.mk
+    $(LOCAL_DIR)/superior_miatoll.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_miatoll-user \
-    cherish_miatoll-userdebug \
-    cherish_miatoll-eng
+    superior_miatoll-user \
+    superior_miatoll-userdebug 
