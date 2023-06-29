@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_miatoll.mk
+    $(LOCAL_DIR)/arrow_miatoll.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_miatoll-user \
-    superior_miatoll-userdebug 
+    arrow_miatoll-user \
+    arrow_miatoll-userdebug 
